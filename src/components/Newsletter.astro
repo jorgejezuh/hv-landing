@@ -1,7 +1,8 @@
-<section id="newsletter" class="section-alt">
-  <h2>Suscríbete</h2>
-  <form action="#" method="post">
-    <input type="email" name="newsletter" placeholder="Tu correo electrónico" required />
-    <button type="submit" class="btn-primary">Suscribir</button>
+<section id="newsletter" class="section-alt" aria-labelledby="newsletter-title">
+  <h2 id="newsletter-title">Suscríbete</h2>
+  <form action="#" method="post" aria-describedby="newsletter-title">
+    <label for="newsletter-email">Correo electrónico</label>
+    <input type="email" id="newsletter-email" name="newsletter" placeholder="Tu correo electrónico" required />
+    <button type="submit" class="btn-primary" role="button">Suscribir</button>
   </form>
 </section>

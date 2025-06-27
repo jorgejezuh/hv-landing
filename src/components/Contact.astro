@@ -1,13 +1,18 @@
-<section id="contact" class="section-alt">
-  <h2>¿Te llamamos?</h2>
+<section id="contact" class="section-alt" aria-labelledby="contact-title">
+  <h2 id="contact-title">¿Te llamamos?</h2>
   <p>Déjanos tus datos y nos pondremos en contacto contigo lo más pronto posible.</p>
-  <form action="#" method="post">
-    <input type="text" name="name" placeholder="Nombre" required />
-    <input type="text" name="surname" placeholder="Apellidos" required />
-    <input type="email" name="email" placeholder="Correo electrónico" required />
-    <input type="tel" name="phone" placeholder="Teléfono" required />
-    <textarea name="message" rows="4" placeholder="Ayúdanos a dirigir mejor tu consulta"></textarea>
+  <form action="#" method="post" aria-describedby="contact-title">
+    <label for="contact-name">Nombre</label>
+    <input type="text" id="contact-name" name="name" placeholder="Nombre" required />
+    <label for="contact-surname">Apellidos</label>
+    <input type="text" id="contact-surname" name="surname" placeholder="Apellidos" required />
+    <label for="contact-email">Correo electrónico</label>
+    <input type="email" id="contact-email" name="email" placeholder="Correo electrónico" required />
+    <label for="contact-phone">Teléfono</label>
+    <input type="tel" id="contact-phone" name="phone" placeholder="Teléfono" required />
+    <label for="contact-message">Ayúdanos a dirigir mejor tu consulta</label>
+    <textarea id="contact-message" name="message" rows="4" placeholder="Ayúdanos a dirigir mejor tu consulta"></textarea>
     <label><input type="checkbox" required /> Acepto la política de privacidad</label>
-    <button type="submit" class="btn-primary">Enviar ahora</button>
+    <button type="submit" class="btn-primary" role="button">Enviar ahora</button>
   </form>
 </section>
