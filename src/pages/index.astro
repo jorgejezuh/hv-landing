@@ -1,11 +1,90 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
 <Layout>
-	<Welcome />
+  <header>
+    <h1>HappyVecinos</h1>
+    <nav>
+      <a href="#why">¿Por qué elegirnos?</a>
+      <a href="#features">Funcionalidades</a>
+      <a href="#faq">Preguntas frecuentes</a>
+    </nav>
+    <a href="https://app.happyvecinos.com" class="btn-primary">Acceso clientes</a>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2><span>HappyVecinos:</span> El software todo en uno para administradores de fincas, comunidades y vecinos.</h2>
+      <p>Transforma la manera en que tu comunidad se gestiona con HappyVecinos, la plataforma más avanzada y completa para administradores de fincas, propietarios y vecinos.</p>
+      <p>En Happy Vecinos, ayudamos a reducir la factura de luz y gestionamos la instalación de sistemas de autoconsumo con partners de confianza. Además, facilitamos la rehabilitación de viviendas para obtener Certificados de Ahorro Energético (CAEs).</p>
+      <p>HappyVecinos es tu solución todo en uno para una gestión comunitaria eficiente y sostenible.</p>
+      <a href="#contact" class="btn-primary">Te lo contamos</a>
+    </section>
+
+    <section id="why">
+      <h2>Tu Socio Tecnológico Ideal</h2>
+      <p>Transforma la gestión de tu comunidad con HappyVecinos, la plataforma integral que ofrece eficiencia, transparencia y sostenibilidad.</p>
+    </section>
+
+    <section id="features">
+      <h2>Funcionalidades Clave</h2>
+      <ul class="feature-list">
+        <li>
+          <h3>Gestión Integral</h3>
+          <p>Administra propiedades, finanzas e incidencias desde un mismo lugar.</p>
+        </li>
+        <li>
+          <h3>Transparencia Total</h3>
+          <p>Acceso completo a contratos y movimientos financieros.</p>
+        </li>
+        <li>
+          <h3>Autoconsumo y CAEs</h3>
+          <p>Optimiza el consumo energético y gestiona los certificados de ahorro.</p>
+        </li>
+        <li>
+          <h3>Soporte Profesional</h3>
+          <p>Conecta tu comunidad con administradores certificados.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Qué es HappyVecinos?</summary>
+        <p>Es una plataforma integral para la gestión de comunidades que prioriza la eficiencia y la sostenibilidad.</p>
+      </details>
+      <details>
+        <summary>¿Quién puede usar HappyVecinos?</summary>
+        <p>Administradores de fincas y propietarios de viviendas en comunidades.</p>
+      </details>
+    </section>
+
+    <section id="contact">
+      <h2>¿Te llamamos?</h2>
+      <p>Déjanos tus datos y nos pondremos en contacto contigo lo más pronto posible.</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="text" name="surname" placeholder="Apellidos" required />
+        <input type="email" name="email" placeholder="Correo electrónico" required />
+        <input type="tel" name="phone" placeholder="Teléfono" required />
+        <textarea name="message" rows="4" placeholder="Ayúdanos a dirigir mejor tu consulta"></textarea>
+        <label><input type="checkbox" required /> Acepto la política de privacidad</label>
+        <button type="submit" class="btn-primary">Enviar ahora</button>
+      </form>
+    </section>
+
+    <section id="newsletter">
+      <h2>Suscríbete</h2>
+      <form action="#" method="post">
+        <input type="email" name="newsletter" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="btn-primary">Suscribir</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gestión comunitaria eficiente y sostenible, todo en uno.</p>
+    <p>&copy; HappyVecinos.com</p>
+  </footer>
 </Layout>
