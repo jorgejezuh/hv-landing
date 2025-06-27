@@ -67,22 +67,26 @@ header nav a:hover {
   background: linear-gradient(90deg, #ff7e5f 0%, #d72660 100%);
   color: #fff;
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: 8px;
   font-weight: 700;
   font-size: 1.15rem;
   box-shadow: 0 6px 24px rgba(45,42,74,0.18);
   border: none;
   cursor: pointer;
   letter-spacing: 0.03em;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.35s cubic-bezier(.4,0,.2,1),
+              transform 0.25s cubic-bezier(.4,0,.2,1),
+              box-shadow 0.25s cubic-bezier(.4,0,.2,1),
+              color 0.25s cubic-bezier(.4,0,.2,1);
   outline: none;
   position: relative;
 }
 
 .btn-primary:hover, .btn-primary:focus {
   background: linear-gradient(90deg, #d72660 0%, #ff7e5f 100%);
-  transform: translateY(-3px) scale(1.07);
-  box-shadow: 0 12px 36px rgba(45,42,74,0.22);
+  transform: translateY(-4px) scale(1.08) rotate(-1deg);
+  box-shadow: 0 16px 40px 0 rgba(45,42,74,0.25);
+  filter: brightness(1.08) saturate(1.1);
 }
 
 main {
