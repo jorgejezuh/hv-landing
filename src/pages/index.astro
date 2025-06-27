@@ -8,18 +8,17 @@ import Contact from '../components/Contact.astro';
 import Newsletter from '../components/Newsletter.astro';
 ---
 <Layout>
-  <header>
-    <div>
-      <img src="/src/assets/logo_color.svg" alt="Logo HappyVecinos" style="height: 2.8em; vertical-align: middle; margin-right: 0.5em;" />
-    <h1 style="display: inline; vertical-align: middle;">HappyVecinos</h1>
+  <header class="sticky top-0 z-50 flex items-center justify-between px-8 py-3 bg-white/95 shadow-lg backdrop-blur-md">
+    <div class="flex items-center gap-2">
+      <img src="/src/assets/logo_color.svg" alt="Logo HappyVecinos" class="h-11 align-middle mr-2" />
+      <h1 class="inline align-middle text-2xl font-bold tracking-tight text-primary">HappyVecinos</h1>
     </div>
-    
-    <nav>
-      <a href="#why">¿Por qué elegirnos?</a>
-      <a href="#features">Funcionalidades</a>
-      <a href="#faq">Preguntas frecuentes</a>
+    <nav class="flex gap-6">
+      <a href="#why" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">¿Por qué elegirnos?</a>
+      <a href="#features" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">Funcionalidades</a>
+      <a href="#faq" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">Preguntas frecuentes</a>
     </nav>
-    <a href="https://app.happyvecinos.com" class="btn-primary">Acceso clientes</a>
+    <a href="https://app.happyvecinos.com" class="inline-block px-6 py-3 bg-gradient-to-r from-pink-400 to-pink-700 text-white rounded-lg font-bold text-lg shadow-md hover:from-pink-700 hover:to-pink-400 hover:scale-105 transition-all">Acceso clientes</a>
   </header>
   <main>
     <Hero />

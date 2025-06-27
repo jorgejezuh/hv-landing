@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-color: #bd6260; /* Rojo coral de marca */
   --primary-color-dark: #a34d4b;
@@ -26,7 +30,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  margin: 0 0 0.5em;
+  margin: 0;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -34,60 +38,6 @@ h1, h2, h3, h4 {
 h1 { font-size: 2rem; }
 h2 { font-size: 1.75rem; }
 h3 { font-size: 1.3rem; }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 2rem; /* Reducido para menor altura */
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
-}
-
-header nav a {
-  margin-right: 1.5rem;
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-header nav a:hover {
-  color: var(--primary-color);
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 0.9rem 2.2rem;
-  background: linear-gradient(90deg, #ff7e5f 0%, #d72660 100%);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  box-shadow: 0 6px 24px rgba(45,42,74,0.18);
-  border: none;
-  cursor: pointer;
-  letter-spacing: 0.03em;
-  transition: background 0.35s cubic-bezier(.4,0,.2,1),
-              transform 0.25s cubic-bezier(.4,0,.2,1),
-              box-shadow 0.25s cubic-bezier(.4,0,.2,1),
-              color 0.25s cubic-bezier(.4,0,.2,1);
-  outline: none;
-  position: relative;
-}
-
-.btn-primary:hover, .btn-primary:focus {
-  background: linear-gradient(90deg, #d72660 0%, #ff7e5f 100%);
-  transform: translateY(-4px) scale(1.08) rotate(-1deg);
-  box-shadow: 0 16px 40px 0 rgba(45,42,74,0.25);
-  filter: brightness(1.08) saturate(1.1);
-}
 
 main {
   padding: 2.5rem 1rem 2rem 1rem;
