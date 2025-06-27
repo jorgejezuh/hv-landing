@@ -106,7 +106,7 @@ section[id], .section-alt[id] {
 
 .section-alt {
   background: var(--surface);
-  padding: 3.5rem 2rem;
+  padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
 }
@@ -201,4 +201,60 @@ footer {
 
 .center-text {
   text-align: center;
+}
+
+/* FAQ styles and animation */
+
+/* Make summary look clickable */
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0.7em 0.5em;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  position: relative;
+  list-style: none;
+}
+
+details summary:hover, details summary:focus {
+  background: rgba(189,98,96,0.08);
+  color: var(--primary-color-dark);
+  text-decoration: underline;
+  box-shadow: 0 2px 8px rgba(189,98,96,0.10);
+}
+
+/* Hide default marker and add custom arrow */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::before {
+  content: '\25B6';
+  display: inline-block;
+  margin-right: 0.7em;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details > *:not(summary) {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+details[open] > *:not(summary) {
+  max-height: 800px;
+  opacity: 1;
+  padding: 0.5em 1em;
+}
+
+details {
+  margin-bottom: 1.2em;
+  background: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(189,98,96,0.04);
+  border: 1px solid #ececec;
+  padding: 0.1em 0.2em;
 }
