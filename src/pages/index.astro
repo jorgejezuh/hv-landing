@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import bg from '../assets/background.svg';
+import Hero from '../components/Hero.astro';
+import Why from '../components/Why.astro';
+import Features from '../components/Features.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 <Layout>
   <header>
@@ -12,83 +17,14 @@ import bg from '../assets/background.svg';
     </nav>
     <a href="https://app.happyvecinos.com" class="btn-primary">Acceso clientes</a>
   </header>
-
   <main>
-    <section id="intro" class="hero">
-      <img class="hero-bg" src={bg.src} alt="" />
-      <h2><span>HappyVecinos:</span> El software todo en uno para administradores de fincas, comunidades y vecinos.</h2>
-      <p>Transforma la manera en que tu comunidad se gestiona con HappyVecinos, la plataforma más avanzada y completa para administradores de fincas, propietarios y vecinos.</p>
-      <p>En Happy Vecinos, ayudamos a reducir la factura de luz y gestionamos la instalación de sistemas de autoconsumo con partners de confianza. Además, facilitamos la rehabilitación de viviendas para obtener Certificados de Ahorro Energético (CAEs).</p>
-      <p>HappyVecinos es tu solución todo en uno para una gestión comunitaria eficiente y sostenible.</p>
-      <a href="#contact" class="btn-primary">Te lo contamos</a>
-    </section>
-
-    <section id="why" class="section-alt">
-      <h2>Tu Socio Tecnológico Ideal</h2>
-      <p>Transforma la gestión de tu comunidad con HappyVecinos, la plataforma integral que ofrece eficiencia, transparencia y sostenibilidad.</p>
-    </section>
-
-    <section id="features">
-      <h2>Funcionalidades Clave</h2>
-      <ul class="feature-list">
-        <li>
-          <span class="feature-icon">🗂️</span>
-          <h3>Gestión Integral</h3>
-          <p>Administra propiedades, finanzas e incidencias desde un mismo lugar.</p>
-        </li>
-        <li>
-          <span class="feature-icon">👀</span>
-          <h3>Transparencia Total</h3>
-          <p>Acceso completo a contratos y movimientos financieros.</p>
-        </li>
-        <li>
-          <span class="feature-icon">🔋</span>
-          <h3>Autoconsumo y CAEs</h3>
-          <p>Optimiza el consumo energético y gestiona los certificados de ahorro.</p>
-        </li>
-        <li>
-          <span class="feature-icon">🛠️</span>
-          <h3>Soporte Profesional</h3>
-          <p>Conecta tu comunidad con administradores certificados.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="faq" class="section-alt">
-      <h2>Preguntas Frecuentes</h2>
-      <details>
-        <summary>¿Qué es HappyVecinos?</summary>
-        <p>Es una plataforma integral para la gestión de comunidades que prioriza la eficiencia y la sostenibilidad.</p>
-      </details>
-      <details>
-        <summary>¿Quién puede usar HappyVecinos?</summary>
-        <p>Administradores de fincas y propietarios de viviendas en comunidades.</p>
-      </details>
-    </section>
-
-    <section id="contact" class="section-alt">
-      <h2>¿Te llamamos?</h2>
-      <p>Déjanos tus datos y nos pondremos en contacto contigo lo más pronto posible.</p>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="text" name="surname" placeholder="Apellidos" required />
-        <input type="email" name="email" placeholder="Correo electrónico" required />
-        <input type="tel" name="phone" placeholder="Teléfono" required />
-        <textarea name="message" rows="4" placeholder="Ayúdanos a dirigir mejor tu consulta"></textarea>
-        <label><input type="checkbox" required /> Acepto la política de privacidad</label>
-        <button type="submit" class="btn-primary">Enviar ahora</button>
-      </form>
-    </section>
-
-    <section id="newsletter" class="section-alt">
-      <h2>Suscríbete</h2>
-      <form action="#" method="post">
-        <input type="email" name="newsletter" placeholder="Tu correo electrónico" required />
-        <button type="submit" class="btn-primary">Suscribir</button>
-      </form>
-    </section>
+    <Hero />
+    <Why />
+    <Features />
+    <FAQ />
+    <Contact />
+    <Newsletter />
   </main>
-
   <footer>
     <p>Gestión comunitaria eficiente y sostenible, todo en uno.</p>
     <p>&copy; HappyVecinos.com</p>
