@@ -6,76 +6,12 @@ import Features from '../components/Features.astro';
 import FAQ from '../components/FAQ.astro';
 import Contact from '../components/Contact.astro';
 import Newsletter from '../components/Newsletter.astro';
+import Header from '../components/Header.astro';
+import MobileMenu from '../components/MobileMenu.astro';
 ---
 <Layout>
-  {/* Menú lateral y backdrop fuera del header para cubrir toda la app */}
-  <nav id="mobile-nav" class="fixed top-0 left-0 h-full w-72 bg-white border-r border-gray-200 shadow-2xl z-[60] transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
-    <div class="flex justify-end p-4">
-      <button id="close-mobile-nav" class="text-2xl text-gray-700 hover:text-primary focus:outline-none" aria-label="Cerrar menú">&times;</button>
-    </div>
-    <ul class="flex flex-col gap-6 mt-8 ml-8">
-      <li><a href="#why" class="text-gray-900 font-medium text-lg hover:text-primary transition-colors">¿Por qué elegirnos?</a></li>
-      <li><a href="#features" class="text-gray-900 font-medium text-lg hover:text-primary transition-colors">Funcionalidades</a></li>
-      <li><a href="#faq" class="text-gray-900 font-medium text-lg hover:text-primary transition-colors">Preguntas frecuentes</a></li>
-    </ul>
-  </nav>
-  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden lg:hidden"></div>
-  <header class="sticky top-0 z-50 flex items-center justify-between px-4 sm:px-8 py-3 bg-white/95 shadow-lg backdrop-blur-md">
-    {/* Menú hamburguesa para <1100px */}
-    <div class="flex items-center w-1/3 lg:hidden">
-      <button id="burger-menu" class="p-2 focus:outline-none" aria-label="Abrir menú">
-        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    {/* Logo centrado, solo imagen en móvil/tablet */}
-    <div class="flex-1 flex justify-center lg:justify-start">
-      <img src="/src/assets/logo_color.svg" alt="Logo HappyVecinos" class="h-10 sm:h-11 align-middle" />
-    </div>
-    {/* Botón de acceso a la derecha */}
-    <div class="flex items-center w-1/3 justify-end">
-      <a href="https://app.happyvecinos.com" class="px-4 py-2 bg-gradient-to-r from-pink-400 to-pink-700 text-white rounded-lg font-bold text-base shadow-md hover:from-pink-700 hover:to-pink-400 hover:scale-105 transition-all lg:px-6 lg:py-3 lg:text-lg">Acceder</a>
-    </div>
-    {/* Navegación visible solo en escritorio */}
-    <nav class="hidden lg:flex gap-6 absolute left-1/2 -translate-x-1/2">
-      <a href="#why" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">¿Por qué elegirnos?</a>
-      <a href="#features" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">Funcionalidades</a>
-      <a href="#faq" class="text-gray-900 font-medium text-base hover:text-primary transition-colors">Preguntas frecuentes</a>
-    </nav>
-    <script>
-      // Script para abrir/cerrar menú hamburguesa
-      if (typeof window !== 'undefined') {
-        const burger = document.getElementById('burger-menu');
-        const nav = document.getElementById('mobile-nav');
-        const backdrop = document.getElementById('mobile-nav-backdrop');
-        const closeBtn = document.getElementById('close-mobile-nav');
-        if (burger && nav && backdrop) {
-          burger.onclick = () => {
-            nav.classList.toggle('-translate-x-full');
-            backdrop.classList.toggle('hidden');
-          };
-          backdrop.onclick = () => {
-            nav.classList.add('-translate-x-full');
-            backdrop.classList.add('hidden');
-          };
-          if (closeBtn) {
-            closeBtn.onclick = () => {
-              nav.classList.add('-translate-x-full');
-              backdrop.classList.add('hidden');
-            };
-          }
-          // Cerrar menú al hacer clic en cualquier enlace del menú lateral
-          nav.querySelectorAll('a').forEach(link => {
-            link.onclick = () => {
-              nav.classList.add('-translate-x-full');
-              backdrop.classList.add('hidden');
-            };
-          });
-        }
-      }
-    </script>
-  </header>
+  <MobileMenu />
+  <Header />
   <main>
     <Hero />
     <Why />
